@@ -57,6 +57,7 @@ pip install black usort flake8 flake8-bugbear flake8-comprehensions
 conda install pytorch3d -c pytorch3d
 conda install cudatoolkit
 pip install numpy==1.23.1 transforms3d open3d plyfile pyyaml tensorboardX tqdm
+sudo apt install cloudcompare
 ```
 
 ## Download
