@@ -2,6 +2,7 @@
 
 
 ---
+
 ## Troubleshooting
 
 **qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "/home/edgar/miniconda3/envs/gen6d_env/lib/python3.9/site-packages/cv2/qt/plugins" even though it was found.**
