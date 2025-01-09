@@ -1,5 +1,32 @@
 # Gen6D
 
+
+---
+## Troubleshooting
+
+**qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "/home/edgar/miniconda3/envs/gen6d_env/lib/python3.9/site-packages/cv2/qt/plugins" even though it was found.**
+
+Problem: Error during `python prepare.py --action sfm --database_name custom/mouse --colmap colmap`
+
+Solution: 
+
+```bash
+pip uninstall opencv-python
+pip install opencv-python-headless
+```
+
+Reference: https://github.com/NVlabs/instant-ngp/discussions/300
+
+**qt.qpa.xcb: could not connect to display**
+
+Problem: Error during `python prepare.py --action sfm --database_name custom/mouse --colmap colmap`
+
+Solution: 
+
+Run via Remotedesktop connection with GUI.
+
+---
+
 Gen6D is able to estimate 6DoF poses for unseen objects like the following video.
 
 ![](assets/example.gif)
@@ -15,6 +42,22 @@ Gen6D is able to estimate 6DoF poses for unseen objects like the following video
 ## Installation
 
 Required packages are listed in `requirements.txt`. To determine how to install PyTorch along with CUDA, please refer to the [pytorch-documentation](https://pytorch.org/get-started/locally/)
+
+Example: 
+
+```bash
+
+conda create -n gen6d_env python=3.9
+conda activate gen6d_env
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install jupyter
+pip install scikit-image matplotlib imageio plotly opencv-python-headless
+conda install -c fvcore -c conda-forge fvcore
+pip install black usort flake8 flake8-bugbear flake8-comprehensions
+conda install pytorch3d -c pytorch3d
+conda install cudatoolkit
+pip install numpy==1.23.1 transforms3d open3d plyfile pyyaml tensorboardX tqdm
+```
 
 ## Download
 
