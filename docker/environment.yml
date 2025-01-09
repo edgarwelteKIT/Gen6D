@@ -1,0 +1,36 @@
+name: gen6d_env
+channels:
+  - pytorch
+  - nvidia
+  - fvcore
+  - conda-forge
+  - pytorch3d
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - jupyter
+  - scikit-image
+  - matplotlib
+  - imageio
+  - plotly
+  - fvcore
+  - cudatoolkit=11.8.0
+  - pytorch3d
+  - pip:
+      - numpy==1.23.1
+      - transforms3d
+      - open3d
+      - plyfile
+      - opencv-python-headless
+      - pyyaml
+      - tensorboardX
+      - tqdm
+      - black
+      - usort
+      - flake8
+      - flake8-bugbear
+      - flake8-comprehensions
